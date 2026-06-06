@@ -25,60 +25,88 @@
         <form action="#" method="post">
             <p>
                 <label style="display: block;">Full Names:</label>
-                <input type="text" name="full_names" style="width: 100%;">
+                <input type="text" name="full_names" style="width: 100%; box-sizing: border-box;">
             </p>
+            
             <p>
-                <label style="display: block;">Age:</label>
-                <input type="number" name="age" style="width: 100%;">
+                <label style="display: block;">Date of Birth:</label>
+                <input type="date" name="dob" style="width: 100%; box-sizing: border-box;">
             </p>
+
+            <p>
+                <label style="display: block; margin-bottom: 5px;">Division:</label>
+                <label style="margin-right: 15px;">
+                    <input type="radio" name="division" value="male" checked> Male
+                </label>
+                <label style="margin-right: 15px;">
+                    <input type="radio" name="division" value="female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="division" value="unspecified"> Prefer not to say
+                </label>
+            </p>
+
             <p>
                 <label style="display: block;">Phone number:</label>
-                <input type="tel" name="phone_number" style="width: 100%;">
+                <input type="tel" name="phone_number" style="width: 100%; box-sizing: border-box;">
             </p>
+            
             <p>
                 <label style="display: block;">County:</label>
-                <input type="text" name="county" style="width: 100%;">
+                <input type="text" name="county" style="width: 100%; box-sizing: border-box;">
             </p>
             <p>
                 <label style="display: block;">Country:</label>
-                <input type="text" name="country" style="width: 100%;">
+                <input type="text" name="country" style="width: 100%; box-sizing: border-box;">
             </p>
+            
             <p>
                 <label style="display: block;">Email address:</label>
-                <input type="email" name="email_address" style="width: 100%;">
+                <input type="email" name="email_address" style="width: 100%; box-sizing: border-box;">
             </p>
+            
             <p>
                 <label style="display: block;">Weight Class:</label>
-                <select name="weight_class" style="width: 100%;">
+                <select name="weight_class" style="width: 100%; box-sizing: border-box; padding: 4px;">
+                    <option value="" disabled selected>-- Select your weight class --</option>
+                    <option value="fly">Flyweight</option>
+                    <option value="feather">Featherweight</option>
                     <option value="light">Lightweight</option>
                     <option value="welter">Welterweight</option>
                     <option value="middle">Middleweight</option>
                     <option value="heavy">Heavyweight</option>
                 </select>
             </p>
+            
             <p>
                 <label style="display: block;">Number of fights:</label>
-                <input type="number" name="num_fights" style="width: 100%;">
+                <input type="number" name="num_fights" min="0" style="width: 100%; box-sizing: border-box;">
             </p>
             <p>
                 <label style="display: block;">Number of wins:</label>
-                <input type="number" name="num_wins" style="width: 100%;">
+                <input type="number" name="num_wins" min="0" style="width: 100%; box-sizing: border-box;">
             </p>
             <p>
                 <label style="display: block;">Number of draws:</label>
-                <input type="number" name="num_draws" style="width: 100%;">
+                <input type="number" name="num_draws" min="0" style="width: 100%; box-sizing: border-box;">
             </p>
             <p>
                 <label style="display: block;">Number of losses:</label>
-                <input type="number" name="num_losses" style="width: 100%;">
+                <input type="number" name="num_losses" min="0" style="width: 100%; box-sizing: border-box;">
             </p>
+
+            <p style="margin-top: 15px;">
+                <label style="display: flex; align-items: flex-start;">
+                    <input type="checkbox" name="medical_clearance" value="yes" style="margin-right: 10px; margin-top: 3px;" required>
+                    <span>I certify that I am medically fit to fight and agree to the tournament regulations.</span>
+                </label>
+            </p>
+
             <p style="text-align: center; margin-top: 20px;">
-                <input type="submit" value="Submit Registration" style="padding: 10px 20px;">
+                <input type="submit" value="Submit Registration" style="padding: 10px 20px; font-weight: bold; cursor: pointer;">
             </p>
         </form>
     </main>
-
-  
 
 </body>
 </html>
